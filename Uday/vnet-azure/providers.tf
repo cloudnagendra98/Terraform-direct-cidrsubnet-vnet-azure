@@ -6,7 +6,7 @@ terraform {
       source  = "hashicorp/azurerm"
     }
   }
-  #this is terraform version constraints
+  #this is terraform version coonstraints
   required_version = ">= 1.8.3"
 }
 provider "azurerm" {
