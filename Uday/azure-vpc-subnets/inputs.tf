@@ -13,14 +13,33 @@ variable "resourcegroup_location" {
 }
 
 variable "azure_network_range" {
-  type    = list(string)
-  default = ["10.10.0.0/16"]
+  type        = list(string)
+  default     = ["10.10.0.0/16"]
+  description = "This is azure virtual network range"
 
 }
 
-variable "azure_subnet_range" {
-    type = list(string)
-    default = [ "10.10.0.0/24" ]
-    description = "This is web subnet range"
-  
+variable "azure_subnets_range" {
+  type        = list(string)
+  default     = ["10.10.0.0/24", "10.10.1.0/24", "10.10.2.0/24"]
+  description = "These are subnet ranges"
 }
+
+variable "subnets_names" {
+  type        = list(string)
+  default     = ["web", "app", "db"]
+  description = "These are subnets names"
+}
+
+variable "subnets_count" {
+  type        = number
+  default     = 3
+  description = "This is subnets count"
+
+}
+#variable "azure_subnet_range" {
+#   type = list(string)
+#   default = [ "10.10.0.0/24" ]
+#   description = "This is web subnet range"
+# 
+#}
